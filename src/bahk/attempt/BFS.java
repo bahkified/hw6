@@ -29,8 +29,9 @@ public class BFS {
             c++;
             Node visited = graph.get(bfsQueue.remove());
             visited.state = State.VISITED;
+            StateColor.assignColor(visited, graph);
 
-            System.out.println(visited.id + "::" + visited.name);
+            System.out.println(visited.id + " :: " + visited.name + " (" + visited.color + ")");
 
             for (int neighbor : visited.neighbors) {
                 Node next = graph.get(neighbor);
