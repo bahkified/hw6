@@ -25,6 +25,7 @@ public class DFS {
         }
 
         node.state = Node.State.VISITED;
+        StateColor.assignColor(node, graph);
 
         for (int neighbor : node.neighbors) {
             Node nextNode = graph.get(neighbor);
@@ -33,7 +34,7 @@ public class DFS {
             }
         }
 
-        System.out.println(node.id + "::" + node.name);
+        System.out.println(node.id + " :: " + node.name + " (" + node.color + ")");
     }
 
 }
