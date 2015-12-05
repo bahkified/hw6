@@ -41,6 +41,7 @@ public class BFS {
             }
         }
 
+        // TODO: output must include the level #
         System.out.println("Total path length: " + c);
     }
 
